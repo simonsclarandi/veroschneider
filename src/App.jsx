@@ -17,7 +17,7 @@ function App() {
     name: "Vero Schneider",
     specialty: "Cosmiatra Senior",
     bio: "Más de 10 años dedicados a la salud y estética de tu piel, combinando tecnología de vanguardia con un trato personalizado.",
-    image: "/Vero.jpg" // Asegúrate de tener esta foto en tu carpeta public/
+    image: "/LogoVero.png" // Asegúrate de tener esta foto en tu carpeta public/
   };
 
   const [selectedService, setSelectedService] = useState(null);
@@ -34,7 +34,13 @@ function App() {
 
       {/* Navbar */}                                                                          
       <nav className="navbar navbar-expand-lg navbar-dark vero-btn-nude bg-primary fixed-top shadow-sm navbar-custom">                                                                               
-        <div className="container container-custom ">                                          
+        <div className="container container-custom ">
+          <img 
+            src={staff.image} 
+            alt={staff.name} 
+            className="rounded-circle border border-2 border-white shadow-sm"
+            style={{ width: '60px', height: '60px', objectFit: 'cover', marginRight: '10px' }}
+          />                                          
           <a className="navbar-brand fw-bold navbar-brand-custom" href="#">Vero Schneider Estética</a>                                                                                  
           <button                                                                             
             className="navbar-toggler vero-btn-nude"                                                        
@@ -61,11 +67,27 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="vero-hero container-fluid" style={{backgroundImage: "linear-gradient(rgba(253, 251, 247, 0.4), rgba(253, 251, 247, 0.4)), url('/Hero.jpg')", backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', padding: '120px 0'}}>
+     <section 
+          className="vero-hero container-fluid" 
+          style={{
+            /* ORDEN DE CAPAS: 1. Logo (arriba) | 2. Gradiente (medio) | 3. Foto (fondo) */
+            backgroundImage: "url('/LogoVero.png'), linear-gradient(rgba(253, 251, 247, 0.4), rgba(253, 251, 247, 0.4)), url('/Hero.jpg')",
+            
+            /* TAMAÑOS: 1. Logo (300px) | 2. Gradiente (auto) | 3. Foto (contain) */
+            backgroundSize: '300px auto, auto, contain', 
+            
+            backgroundRepeat: 'no-repeat, no-repeat, no-repeat',
+            
+            /* POSICIONES: 1. Logo (derecha) | 2. Gradiente (centro) | 3. Foto (izquierda) */
+            backgroundPosition: 'right 10% center, center, left center', 
+            
+            padding: '120px 0'
+          }}
+        >
         <div className="container text-center">
-          <h1 className="vero-title display-3 mb-4">Vero Schneider Estética</h1>
+          <h1 className="vero-title display-3 mb-4">Centro Estética Integral</h1>
           <p className="lead mb-5">Bienestar y estética integral con tecnología de vanguardia.</p>
-          <a href="#contacto" className="nav-item btn vero-btn-nude btn-lg" rel="noopener noreferrer">
+          <a href="#agendar" className="nav-item btn vero-btn-nude btn-lg" rel="noopener noreferrer">
             Reservar Turno
           </a>
         </div>
@@ -86,7 +108,20 @@ function App() {
                 <p className="fw-bold mt-auto">Duración: 1 hora | $28.000</p>
                 <button className="btn vero-btn-nude mt-3" onClick={() => setSelectedService({
                   title: 'Venus Legacy Facial 🌸',
-                  description: 'Descripción detallada de Venus Legacy... beneficios, qué esperar, etc.',
+                  description: `MANTENÉ TU PIEL SIN ARRUGAS TODO EL AÑO
+                      ✨ Piel más firme, luminosa e hidratada
+
+                      ✔️ Venus Legacy
+                      ✔️ Punta de Diamante
+                      ✔️ Máscara Facial Nutritiva
+
+                      💎 BENEFICIOS
+
+                      • Estimula colágeno y elastina
+                      • Reafirma y tonifica la piel
+                      • Atenúa líneas de expresión
+                      • Mejora la textura y luminosidad
+                      • Hidratación profunda y efecto glow`,
                   duration: '1 hora',
                   price: '$28.000'
                 })}>
@@ -104,6 +139,29 @@ function App() {
                 <h3 className="vero-title h4">Presoterapia ✨</h3>
                 <p>Desinflamación y drenaje linfático con anteojos de relajación.</p>
                 <p className="fw-bold mt-auto">Duración: 40 min | $33.000</p>
+                <button className="btn vero-btn-nude mt-3" onClick={() => setSelectedService({
+                  title: 'Presoterapia ✨',
+                  description: `Sentí tus piernas más livianas y tu cuerpo más desinflamado desde la primera sesión.
+
+                    La presoterapia es un tratamiento no invasivo que utiliza presión de aire secuencial para estimular el sistema linfático y mejorar la circulación.
+
+                    🩷Beneficios:
+                    ✔️ Reduce la retención de líquidos
+                    ✔️ Favorece el drenaje linfático
+                    ✔️ Disminuye la sensación de piernas cansadas
+                    ✔️ Ayuda a mejorar la celulitis
+                    ✔️ Colabora en la eliminación de toxinas
+                    ✔️ Genera una agradable sensación de bienestar y relajación.
+                    💝 Regalito sesión incorpora anteojos de relajación con presión Barométrica y música que armonizan tus momentos .
+
+                    Ideal para quienes buscan desinflamar, mejorar la circulación y sentirse más livianas.
+
+                    🌿 Regalate un momento para vos y disfrutá de todos sus beneficios.`,
+                  duration: '40 min',
+                  price: '$33.000'
+                })}>
+                  Mas información
+                </button>
               </div>
             </div>
           </div>
@@ -116,6 +174,26 @@ function App() {
                 <h3 className="vero-title h4">Limpieza Profunda</h3>
                 <p>Renová tu piel con punta de diamante y activos específicos.</p>
                 <p className="fw-bold mt-auto">Duración: 60-90 min</p>
+                <button className="btn vero-btn-nude mt-3" onClick={() => setSelectedService({
+                  title: 'Limpieza Profunda',
+                  description: `✨ Renová tu piel y devolvele su luminosidad natural.
+
+                    ✔️ Limpieza profunda y extracción de comedones
+                    ✔️ Peeling y exfoliación con punta de diamante
+                    ✔️ Cabina LED y activos específicos para tu piel
+                    ✔️ Hidratación, nutrición y revitalización facial
+                    ✔️ Ayuda a minimizar poros visibles y mejorar la textura
+
+                    🌿 Tratamiento personalizado según las necesidades de cada piel.
+
+                    ⏱️ Duración: 60 a 90 minutos
+
+                    💆‍♀️ Ideal para lucir una piel más limpia, fresca, luminosa y saludable.`,
+                  duration: '60-90 min',
+                  price: 'Consultar'
+                })}>
+                  Mas información
+                </button>
               </div>
             </div>
           </div>
@@ -152,7 +230,7 @@ function App() {
       <section id="contacto" className="container py-5">
         <div className="row g-5 align-items-center">
           <div className="col-lg-6">
-            <h2 className="vero-title mb-4">Reservá tu Turno</h2>
+            <h2 className="vero-title mb-4">Envia tu consulta específica por WhatsApp</h2>
             <form onSubmit={handleSubmit} className="p-4 border rounded shadow-sm bg-white">
               <div className="mb-3">
                 <label className="form-label">Nombre</label>
@@ -201,7 +279,7 @@ function App() {
 
       {/* Sección Agendar con Cal.com */}
       <section id="agendar" className="container py-5 text-center">
-        <h2 className="vero-title mb-4">¿Preferís agendar online?</h2>
+        <h2 className="vero-title mb-4">¿Preferís agendar online ahora mismo?</h2>
         <button 
           data-cal-link="https://cal.com/simon-sclarandi" 
           className="btn vero-btn-nude btn-lg"
@@ -235,13 +313,13 @@ function App() {
                 <button type="button" className="btn-close" onClick={() => setSelectedService(null)}></button>
               </div>
               <div className="modal-body">
-                <p>{selectedService.description}</p>
+                <p style={{ whiteSpace: 'pre-line', lineHeight: '1.6' }}>{selectedService.description}</p>
                 <hr />
                 <p><strong>Duración:</strong> {selectedService.duration}</p>
                 <p><strong>Precio:</strong> {selectedService.price}</p>
               </div>
               <div className="modal-footer border-0">
-                <a href="https://wa.me/5493515745470" className="btn vero-btn-nude w-100">Reservar Turno</a>
+                <a href="#agendar" className="btn vero-btn-nude w-100" onClick={() => setSelectedService(null)}>Reservar Turno</a>
               </div>
             </div>
           </div>

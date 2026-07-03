@@ -4,6 +4,7 @@ body {
   background-color: #FDFBF7;
   color: #333333;
   font-family: 'Montserrat', sans-serif;
+  zoom: 0.9
 }
 
 h1, h2, h3, .vero-title {
@@ -18,7 +19,7 @@ h1, h2, h3, .vero-title {
 .vero-card {
   border: none !important;
   border-radius: 20px !important;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0px 15px 35px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
   background-color: #ffffff;
   height: 100%;
