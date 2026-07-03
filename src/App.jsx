@@ -85,7 +85,7 @@ function App() {
           }}
         >
         <div className="container text-center">
-          <h1 className="vero-title display-3 mb-4">Centro Estética Integral</h1>
+          <h1 className="vero-title display-3 mb-4" >Centro Estética Integral</h1>
           <p className="lead mb-5">Bienestar y estética integral con tecnología de vanguardia.</p>
           <a href="#agendar" className="nav-item btn vero-btn-nude btn-lg" rel="noopener noreferrer">
             Reservar Turno
@@ -101,7 +101,7 @@ function App() {
           {/* Venus Legacy */}
           <div className="col-md-4">
             <div className="card vero-card h-100">
-              <img src="/Facial.jpg" className="card-img-top" alt="Venus Legacy Facial" style={{height: '200px', objectFit: 'cover', borderRadius: '20px 20px 0 0'}} />
+              <img src="/Facial.jpg" className="card-img-top" alt="Venus Legacy Facial" style={{height: '350px', objectFit: 'cover', borderRadius: '20px 20px 0 0'}} />
               <div className="p-4">
                 <h3 className="vero-title h4">Venus Legacy Facial 🌸</h3>
                 <p>Piel más firme y luminosa con tecnología de alta gama.</p>
@@ -134,7 +134,7 @@ function App() {
           {/* Presoterapia */}
           <div className="col-md-4">
             <div className="card vero-card h-100">
-              <img src="/Presoterapia.jpg" className="card-img-top" alt="Presoterapia" style={{height: '200px', objectFit: 'cover', borderRadius: '20px 20px 0 0'}} />
+              <img src="/Presoterapia.jpg" className="card-img-top" alt="Presoterapia" style={{height: '350px', objectFit: 'cover', borderRadius: '20px 20px 0 0'}} />
               <div className="p-4">
                 <h3 className="vero-title h4">Presoterapia ✨</h3>
                 <p>Desinflamación y drenaje linfático con anteojos de relajación.</p>
@@ -169,7 +169,7 @@ function App() {
           {/* Limpieza */}
           <div className="col-md-4">
             <div className="card vero-card h-100">
-              <img src="/Limpieza.jpg" className="card-img-top" alt="Limpieza Facial" style={{height: '200px', objectFit: 'cover', borderRadius: '20px 20px 0 0'}} />
+              <img src="/Limpieza.jpg" className="card-img-top" alt="Limpieza Facial" style={{height: '350px', objectFit: 'cover', borderRadius: '20px 20px 0 0'}} />
               <div className="p-4">
                 <h3 className="vero-title h4">Limpieza Profunda</h3>
                 <p>Renová tu piel con punta de diamante y activos específicos.</p>
