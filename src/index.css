@@ -73,3 +73,71 @@ h1, h2, h3, .vero-title {
 .nav-link-custom:hover {                                                                      
   color: #fff !important;                                                                     
 }
+
+/* ============================================ */
+/* HERO RESPONSIVE (Escritorio vs Móvil)        */
+/* ============================================ */
+
+/* 1. Diseño por defecto para Escritorio (Pantallas grandes) */
+.vero-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+  position: relative;
+  /* El diseño lujoso de doble imagen que teníamos */
+  background-image: url('/LogoVero.png'), linear-gradient(rgba(253, 251, 247, 0.4), rgba(253, 251, 247, 0.4)), url('/Hero.jpg');
+  background-size: 300px auto, auto, contain;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: right 10% center, center, left center;
+}
+
+/* 2. Diseño para Tablets y Móviles (Pantallas medianas/pequeñas) */
+@media (max-width: 991px) {
+  .vero-hero {
+    /* Simplificamos: Quitamos el logo flotante (ya está en el navbar) 
+       y hacemos que la imagen principal cubra todo con un gradiente más fuerte 
+       para asegurar que el texto se lea perfecto */
+    background-image: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.85)), url('/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Ajustamos el tamaño del texto para que no desborde en celulares */
+  .vero-hero .display-3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ============================================ */
+/* NAVBAR RESPONSIVE (Evitar que se baje el botón) */
+/* ============================================ */
+
+/* Tamaño por defecto de la imagen del Navbar */
+.navbar-img-custom {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+  flex-shrink: 0; /* Evita que la imagen se aplaste si el texto es muy largo */
+}
+
+@media (max-width: 991px) {
+  /* En celulares y tablets pequeñas: Achicamos todo proporcionalmente */
+  .navbar-img-custom {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  
+  .navbar-brand-custom {
+    font-size: 1.1rem !important; /* Achicamos la tipografía del logo */
+    white-space: nowrap; /* Obligamos a que el texto quede en una sola línea */
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem; /* Hacemos el botón un poco más compacto */
+  }
+}

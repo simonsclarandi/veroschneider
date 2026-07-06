@@ -17,7 +17,7 @@ function App() {
     name: "Vero Schneider",
     specialty: "Cosmiatra Senior",
     bio: "Más de 10 años dedicados a la salud y estética de tu piel, combinando tecnología de vanguardia con un trato personalizado.",
-    image: "/LogoVero.png" // Asegúrate de tener esta foto en tu carpeta public/
+    image: "/Vero.jpg" // Asegúrate de tener esta foto en tu carpeta public/
   };
 
   const [selectedService, setSelectedService] = useState(null);
@@ -34,22 +34,29 @@ function App() {
 
       {/* Navbar */}                                                                          
       <nav className="navbar navbar-expand-lg navbar-dark vero-btn-nude bg-primary fixed-top shadow-sm navbar-custom">                                                                               
-        <div className="container container-custom ">
-          <img 
-            src={staff.image} 
-            alt={staff.name} 
-            className="rounded-circle border border-2 border-white shadow-sm"
-            style={{ width: '60px', height: '60px', objectFit: 'cover', marginRight: '10px' }}
-          />                                          
-          <a className="navbar-brand fw-bold navbar-brand-custom" href="#">Vero Schneider Estética</a>                                                                                  
+        <div className="container container-custom flex-nowrap"> 
+          
+          {/* AGRUPAMOS IMAGEN Y TÍTULO PARA QUE NO SE SEPAREN */}
+          <div className="d-flex align-items-center" style={{ maxWidth: '80%' }}>
+            <img 
+              src="LogoVero.png"
+              alt={staff.name} 
+              className="rounded-circle border border-2 border-white shadow-sm navbar-img-custom"
+            />                                          
+            <a className="navbar-brand fw-bold navbar-brand-custom m-0 text-truncate" href="#">
+              Vero Schneider Estética
+            </a>   
+          </div>
+                                                                                           
           <button                                                                             
-            className="navbar-toggler vero-btn-nude"                                                        
+            className="navbar-toggler vero-btn-nude ms-2"                                                        
             type="button"                                                                     
             data-bs-toggle="collapse"                                                         
             data-bs-target="#navbarNav"                                                      
           >                                                                                   
             <span className="navbar-toggler-icon"></span>                                     
-          </button>                                                                           
+          </button> 
+
           <div className="collapse navbar-collapse" id="navbarNav">                           
             <ul className="navbar-nav ms-auto">                                               
               <li className="nav-item">                                                       
@@ -67,27 +74,11 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-     <section 
-          className="vero-hero container-fluid" 
-          style={{
-            /* ORDEN DE CAPAS: 1. Logo (arriba) | 2. Gradiente (medio) | 3. Foto (fondo) */
-            backgroundImage: "url('/LogoVero.png'), linear-gradient(rgba(253, 251, 247, 0.4), rgba(253, 251, 247, 0.4)), url('/Hero.jpg')",
-            
-            /* TAMAÑOS: 1. Logo (300px) | 2. Gradiente (auto) | 3. Foto (contain) */
-            backgroundSize: '300px auto, auto, contain', 
-            
-            backgroundRepeat: 'no-repeat, no-repeat, no-repeat',
-            
-            /* POSICIONES: 1. Logo (derecha) | 2. Gradiente (centro) | 3. Foto (izquierda) */
-            backgroundPosition: 'right 10% center, center, left center', 
-            
-            padding: '120px 0'
-          }}
-        >
-        <div className="container text-center">
-          <h1 className="vero-title display-3 mb-4" >Centro Estética Integral</h1>
-          <p className="lead mb-5">Bienestar y estética integral con tecnología de vanguardia.</p>
-          <a href="#agendar" className="nav-item btn vero-btn-nude btn-lg" rel="noopener noreferrer">
+      <section className="vero-hero container-fluid">
+        <div className="container text-center position-relative" style={{ zIndex: 10 }}>
+          <h1 className="vero-title display-3 mb-4">Centro Estética Integral</h1>
+          <p className="lead mb-5 fw-semibold">Bienestar y estética integral con tecnología de vanguardia.</p>
+          <a href="#contacto" className="btn vero-btn-nude btn-lg">
             Reservar Turno
           </a>
         </div>
@@ -277,7 +268,7 @@ function App() {
         </div>
       </section>
 
-      {/* Sección Agendar con Cal.com */}
+      {/* Sección Agendar con Cal.com 
       <section id="agendar" className="container py-5 text-center">
         <h2 className="vero-title mb-4">¿Preferís agendar online ahora mismo?</h2>
         <button 
@@ -287,12 +278,13 @@ function App() {
           Agendar Turno Online
         </button>
       </section>
-
+        */}
       {/* Footer */}
       <footer className="text-center py-5 mt-5" style={{backgroundColor: "#f5f2eb"}}>
         <div className="container">
           <h3 className="vero-title h5 mb-3">Tu momento de brillar</h3>
           <p>📍 Soldado Ramón Angel Cabrera 6950, Córdoba</p>
+          <p className="mb-3">📞 +54 9 351 5745470</p>
           <a href="https://wa.me/5493515745470" className="btn vero-btn-nude mt-3" >
             WhatsApp 
           </a>
