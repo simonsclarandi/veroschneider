@@ -165,7 +165,7 @@ const Servicios = ({ onSelectService }) => {
       <div className="row g-4">
         {/* Usamos la variable serviciosAMostrar en lugar de todo el arreglo */}
         {serviciosAMostrar.map((servicio) => (
-          <div className="col-md-3" key={servicio.id}>
+          <div className="col-12 col-md-6 col-lg-3" key={servicio.id}>
             <div className="card vero-card h-100">
               <img 
                 src={servicio.imgSrc} 

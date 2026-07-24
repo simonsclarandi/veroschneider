@@ -3,16 +3,16 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark vero-btn-nude bg-primary fixed-top shadow-sm navbar-custom">                                                                               
-      <div className="container container-custom flex-nowrap"> 
+      <div className="container container-custom"> 
         
         {/* AGRUPAMOS IMAGEN Y TÍTULO PARA QUE NO SE SEPAREN */}
-        <div className="d-flex align-items-center" style={{ maxWidth: '80%' }}>
+        <div className="d-flex align-items-center nav-brand-wrapper">
           <img 
-            src="LogoVero.png"
+            src="/LogoVero.png"
             alt="Vero Schneider" 
             className="rounded-circle border border-2 border-white shadow-sm navbar-img-custom"
           />                                          
-          <a className="navbar-brand fw-bold navbar-brand-custom m-0 text-truncate" href="#">
+          <a className="navbar-brand fw-bold navbar-brand-custom m-0" href="#">
             Vero Schneider Estética
           </a>   
         </div>

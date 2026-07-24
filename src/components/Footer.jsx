@@ -25,9 +25,9 @@ const Footer = () => {
           </div>
 
           {/* Columna 3: Redes y Acciones */}
-          <div className="col-md-4 d-flex justify-content-center justify-content-md-end">
-            {/* Usamos gap-3 para separar los botones sin necesidad de spans vacíos */}
-            <div className="d-flex gap-3">
+          <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
+            {/* Agregamos flex-wrap para que se acomoden limpios y quitamos padding excesivo en pantallas medianas */}
+            <div className="d-flex flex-wrap justify-content-center gap-2">
               <a 
                 href="https://wa.me/5493515745470" 
                 target="_blank" 

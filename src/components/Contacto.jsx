@@ -45,23 +45,36 @@ const Contacto = () => {
           </form>
         </div>
         
-        <div className="col-lg-6">
-           <div className="p-3 rounded text-black" style={{backgroundColor: "#D4C4B7"}}>
-              <h3 className="vero-title">Ubicación</h3>
-              <p>📍 Soldado Ramón Angel Cabrera 6950, Córdoba</p>
-              <div className="rounded overflow-hidden shadow-sm mt-3" style={{ width: '100%', height: '350px' }}>
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.299747141695!2d-64.27525272341596!3d-31.37829749441275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329fadad7624e5%3A0xd2a846c282629e8!2sBe%20Spa%20M%C3%A9dico!5e0!3m2!1ses-419!2sar!4v1782583233907!5m2!1ses-419!2sar" 
-                  title="Mapa de Ubicación"
-                  style={{ width: '100%', height: '100%', border: 0 }} 
-                  allowFullScreen="" 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
-              <p className="text-dark mt-2 small fw-bold">Ver en Google Maps →</p>
-           </div>
-        </div>
+        <div className="col-lg-6 mb-4 mb-lg-0">
+  
+  {/* Agregué h-100 para que la caja quede simétrica si hay otra columna al lado */}
+  <div className="p-4 rounded text-black h-100 d-flex flex-column" style={{backgroundColor: "#D4C4B7"}}>
+    <h3 className="vero-title">Ubicación</h3>
+    <p>📍 Soldado Ramón Angel Cabrera 6950, Córdoba</p>
+    
+    {/* 🚀 APLICADO: Contenedor 'ratio ratio-4x3' de Bootstrap. Safari ama esta estructura matemática. */}
+    <div className="ratio ratio-4x3 rounded shadow-sm mt-2" style={{ overflow: 'hidden' }}>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.299747141695!2d-64.27525272341596!3d-31.37829749441275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329fadad7624e5%3A0xd2a846c282629e8!2sBe%20Spa%20M%C3%A9dico!5e0!3m2!1ses-419!2sar!4v1782583233907!5m2!1ses-419!2sar" 
+        title="Mapa de Ubicación Vero Schneider"
+        style={{ border: 0 }} 
+        allowFullScreen="" 
+        /* 🚀 APLICADO: Eliminamos loading="lazy" y alturas fijas manuales */
+        referrerPolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    
+    {/* 🚀 APLICADO: Convertí el texto en un botón/enlace real que abre la app de Google Maps */}
+    <a 
+      href="https://maps.app.goo.gl/aM85RnX4hha22FdY9" /* Te dejo un link genérico, cámbialo por el link corto de tu local */
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-dark mt-3 small fw-bold text-decoration-none mt-auto"
+    >
+      Ver en Google Maps →
+    </a>
+  </div>
+</div>
       </div>
     </section>
   );

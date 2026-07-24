@@ -4,16 +4,11 @@ body {
   background-color: #FDFBF7;
   color: #333333;
   font-family: 'Montserrat', sans-serif;
-  zoom: 0.8
+  zoom: 0.8;
 }
 
 h1, h2, h3, .vero-title {
   font-family: 'Playfair Display', serif;
-}
-
-.vero-hero {
-  padding: 100px 0;
-  text-align: center;
 }
 
 .vero-card {
@@ -46,7 +41,7 @@ h1, h2, h3, .vero-title {
 }
 
 /* ============================================ */                                            
-/* NAVBAR                                     */                                              
+/* NAVBAR                                       */                                              
 /* ============================================ */                                            
                                                                                               
 .navbar-custom {                                                                              
@@ -74,6 +69,15 @@ h1, h2, h3, .vero-title {
   color: #fff !important;                                                                     
 }
 
+/* Tamaño por defecto de la imagen del Navbar */
+.navbar-img-custom {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+  flex-shrink: 0; /* Evita que la imagen se aplaste si el texto es muy largo */
+}
+
 /* ============================================ */
 /* HERO RESPONSIVE (Escritorio vs Móvil)        */
 /* ============================================ */
@@ -93,51 +97,128 @@ h1, h2, h3, .vero-title {
   background-position: right 10% center, center, left center;
 }
 
-/* 2. Diseño para Tablets y Móviles (Pantallas medianas/pequeñas) */
-@media (max-width: 991px) {
+/* ============================================ */
+/* TABLET RESPONSIVE (iPad Vertical - 768px a 991px) */
+/* ============================================ */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  /* Hero a escala miniatura para mantener las dos imágenes */
   .vero-hero {
-    /* Simplificamos: Quitamos el logo flotante (ya está en el navbar) 
-       y hacemos que la imagen principal cubra todo con un gradiente más fuerte 
-       para asegurar que el texto se lea perfecto */
-    background-image: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.85)), url('/Hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: 200px auto, auto, contain !important; 
+    padding: 60px 0 !important;
+    min-height: 40vh;
+  }
+  .vero-hero .display-3 {
+    font-size: 2.2rem !important;
+  }
+  .vero-hero .lead {
+    font-size: 1rem !important;
+  }
+
+  /* Tarjetas de servicios ajustadas para que no se rompan las letras */
+  .vero-card {
+    padding: 1rem !important;
+  }
+  .vero-card h3 {
+    font-size: 1.1rem !important;
+  }
+  .vero-card p, 
+  .vero-card div {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
   }
   
-  /* Ajustamos el tamaño del texto para que no desborde en celulares */
-  .vero-hero .display-3 {
-    font-size: 2.5rem;
+  /* Botones miniatura (Evita "Presotera-pia" o "Mas info-rma-ción") */
+  .vero-card .btn {
+    font-size: 0.7rem !important;
+    padding: 8px 12px !important;
+    white-space: nowrap !important; /* CRÍTICO: Prohíbe el salto de línea en botones */
   }
-}
 
-/* ============================================ */
-/* NAVBAR RESPONSIVE (Evitar que se baje el botón) */
-/* ============================================ */
-
-/* Tamaño por defecto de la imagen del Navbar */
-.navbar-img-custom {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  margin-right: 15px;
-  flex-shrink: 0; /* Evita que la imagen se aplaste si el texto es muy largo */
-}
-
-@media (max-width: 991px) {
-  /* En celulares y tablets pequeñas: Achicamos todo proporcionalmente */
+  /* 🚀 NUEVO: Navbar liberado para iPad */
+  .nav-brand-wrapper {
+    flex: 1; /* Le dice que tome todo el espacio... */
+    min-width: 0; /* ...pero le permite encogerse para no pisar al botón */
+  }
   .navbar-img-custom {
     width: 45px;
     height: 45px;
     margin-right: 10px;
   }
-  
   .navbar-brand-custom {
-    font-size: 1.1rem !important; /* Achicamos la tipografía del logo */
-    white-space: nowrap; /* Obligamos a que el texto quede en una sola línea */
+    font-size: 1.1rem !important;
+    white-space: nowrap !important; /* Si el texto no entra, bajará sutilmente de renglón en lugar de empujar el botón */
+    line-height: 1.2;
+  }
+
+  /* 🚀 NUEVO: Footer compacto para iPad */
+  .footer-custom {
+    padding: 3rem 0 !important;
+  }
+  .footer-custom h3 {
+    font-size: 1.2rem !important;
+  }
+  .footer-custom .btn {
+    font-size: 0.85rem !important;
+    padding: 8px 20px !important;
+  }
+}
+
+/* ============================================ */
+/* CELULAR RESPONSIVE (Menos de 767px)          */
+/* ============================================ */
+@media (max-width: 767px) {
+  
+  /* Hero simplificado para celulares (Fondo completo y más gradiente) */
+  .vero-hero {
+    background-image: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.85)), url('/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0; /* Un poco de respiro arriba y abajo */
+  }
+  
+  .vero-hero .display-3 {
+    font-size: 2.5rem;
+  }
+
+  /* Tarjetas de servicios ajustadas para que no se rompan las letras */
+  .vero-card {
+    padding: 1rem !important;
+  }
+  .vero-card h3 {
+    font-size: 1.1rem !important;
+  }
+  .vero-card p, 
+  .vero-card div {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Botones miniatura (Evita "Presotera-pia" o "Mas info-rma-ción") */
+  .vero-card .btn {
+    font-size: 0.7rem !important;
+    padding: 8px 12px !important;
+    white-space: nowrap !important; /* CRÍTICO: Prohíbe el salto de línea en botones */
+  }
+
+  /* 🚀 NUEVO: Navbar controlado para Celulares */
+  .nav-brand-wrapper {
+    max-width: 75%; /* Limitamos el espacio para que no empuje el botón de hamburguesa */
+  }
+  .navbar-img-custom {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  .navbar-brand-custom {
+    font-size: 1.1rem !important;
+    white-space: nowrap;
+    overflow: hidden; /* Esto aplica los puntos suspensivos solo en celular */
+    text-overflow: ellipsis; 
   }
 
   .navbar-toggler {
     padding: 0.25rem 0.5rem;
-    font-size: 0.9rem; /* Hacemos el botón un poco más compacto */
+    font-size: 0.9rem;
   }
 }
