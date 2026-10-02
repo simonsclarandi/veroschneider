@@ -6,7 +6,7 @@ const Contacto = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const msg = `Hola Vero, soy ${formData.name}. Quiero consultar por: ${formData.service}. Mensaje: ${formData.message}`;
-    window.open(`https://wa.me/5493515745470?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/5493513740798?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   return (

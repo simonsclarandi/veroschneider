@@ -9,7 +9,7 @@ const serviciosEstrella = [
     shortDesc: 'Piel más firme y luminosa con tecnología de alta gama.',
     imgSrc: '/Facial.jpg',
     duration: '1 hora',
-    price: '$28.000',
+    price: '$50.000',
     description: `MANTENÉ TU PIEL SIN ARRUGAS TODO EL AÑO
 ✨ Piel más firme, luminosa e hidratada
 
@@ -52,7 +52,7 @@ La presoterapia es un tratamiento no invasivo que utiliza presión de aire secue
     shortDesc: 'Renová tu piel con punta de diamante y activos específicos.',
     imgSrc: '/Limpieza.jpg',
     duration: '60-90 min',
-    price: '$50.000',
+    price: '$55.000',
     description: `✨ Renová tu piel y devolvele su luminosidad natural.
 
 ✔️ Limpieza profunda y extracción de comedones
@@ -71,7 +71,7 @@ La presoterapia es un tratamiento no invasivo que utiliza presión de aire secue
     shortDesc: 'Tratamiento no invasivo para un cuerpo más estilizado y esculpido.',
     imgSrc: '/LegacyCorporal.jpg', 
     duration: '60 minutos',
-    price: '$40.000',
+    price: '$45.000',
     description: `Redefiní tu figura con tecnología de vanguardia.
 
 Venus Legacy™ utiliza radiofrecuencia multipolar y campos electromagnéticos pulsados para aplicar calor por debajo de la superficie de la piel. 
@@ -89,7 +89,7 @@ Venus Legacy™ utiliza radiofrecuencia multipolar y campos electromagnéticos p
     shortDesc: 'Exfoliación profunda para una piel renovada y luminosa.',
     imgSrc: '/Dermaplaning.jpg',
     duration: '60 minutos',
-    price: '$50.000',
+    price: '$65.000',
     description: `Un respiro de frescura y luminosidad para tu rostro.
 
 Es un método de exfoliación físico que consiste en producir un raspado suave sin generar lesiones.
@@ -102,11 +102,11 @@ Es un método de exfoliación físico que consiste en producir un raspado suave 
   },
   {
     id: 6,
-    title: 'Dermapen 🖋️',
+    title: 'Venus Legacy + Dermapen 🖋️',
     shortDesc: 'El "lápiz anti-imperfecciones" para restaurar tu piel.',
     imgSrc: '/Dermapen.jpg',
-    duration: '30 minutos',
-    price: '$60.000',
+    duration: '60 minutos',
+    price: '$70.000',
     description: `Restaurá la juventud y textura de tu dermis.
 
 Conocido como el "lápiz borra imperfecciones", este tratamiento de micropunción restaura el colágeno y la elastina mediante microagujas indoloras.
@@ -122,8 +122,8 @@ Conocido como el "lápiz borra imperfecciones", este tratamiento de micropunció
     title: 'Mio-up (Starbenne) 💪',
     shortDesc: 'Contractor muscular para tonificar y reducir adiposidad.',
     imgSrc: '/MioUp.jpg',
-    duration: '30 minutos',
-    price: '$8.500',
+    duration: '30 minutos - 8 sesiones',
+    price: '$95.000',
     description: `Tonificación muscular avanzada.
 
 Este equipo genera pulsos electromagnéticos que desencadenan contracciones musculares profundas, imposibles de lograr con ejercicio convencional.
@@ -133,22 +133,22 @@ Este equipo genera pulsos electromagnéticos que desencadenan contracciones musc
 • Aumenta y tonifica las fibras musculares
 • Ideal para abdomen, glúteos, muslos y brazos`
   },
-  {
-    id: 8,
-    title: 'Masajes Relajantes 🌿',
-    shortDesc: 'Un momento pleno de relajación para tu cuerpo y mente.',
-    imgSrc: '/Masajes.jpg',
-    duration: 'Consultar',
-    price: 'Consultar',
-    description: `Desconectá de la rutina y aliviá tensiones.
+//   {
+//     id: 8,
+//     title: 'Masajes Relajantes 🌿',
+//     shortDesc: 'Un momento pleno de relajación para tu cuerpo y mente.',
+//     imgSrc: '/Masajes.jpg',
+//     duration: 'Consultar',
+//     price: 'Consultar',
+//     description: `Desconectá de la rutina y aliviá tensiones.
 
-Constan de una sesión de maniobras relajantes corporales diseñadas para liberar el estrés acumulado.
+// Constan de una sesión de maniobras relajantes corporales diseñadas para liberar el estrés acumulado.
 
-💎 BENEFICIOS:
-• Utilización de aceites y activos esenciales
-• Aporta gran suavidad en la textura de la piel
-• Induce a un estado de paz y relajación profunda`
-  }
+// 💎 BENEFICIOS:
+// • Utilización de aceites y activos esenciales
+// • Aporta gran suavidad en la textura de la piel
+// • Induce a un estado de paz y relajación profunda`
+//   }
 ];
 
 const Servicios = ({ onSelectService }) => {

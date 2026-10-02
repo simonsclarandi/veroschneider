@@ -19,7 +19,7 @@ const Footer = () => {
                 📍 Soldado Ramón Angel Cabrera 6950, Córdoba
               </li>
               <li>
-                📞 +54 9 351 574-5470
+                📞 +54 9 351 374-0798
               </li>
             </ul>
           </div>
@@ -29,7 +29,7 @@ const Footer = () => {
             {/* Agregamos flex-wrap para que se acomoden limpios y quitamos padding excesivo en pantallas medianas */}
             <div className="d-flex flex-wrap justify-content-center gap-2">
               <a 
-                href="https://wa.me/5493515745470" 
+                href="https://wa.me/5493513740798" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn vero-btn-nude"
